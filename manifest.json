@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Prompt Vault",
+  "description": "Save, categorize, copy, insert, optimize, and sync your prompts.",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "Prompt Vault",
+    "default_popup": "src/popup/popup.html"
+  },
+  "options_page": "src/options/options.html",
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/contentScript.js"
+      ],
+      "css": [
+        "src/contentScript.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
+

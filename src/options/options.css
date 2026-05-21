@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f8fafc;
+  color: #0f172a;
+  font: 14px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.settings {
+  display: grid;
+  gap: 18px;
+  width: min(760px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 17px;
+}
+
+section {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+input {
+  height: 36px;
+  padding: 0 10px;
+}
+
+textarea {
+  min-height: 110px;
+  padding: 10px;
+}
+
+button {
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid #2563eb;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.category-form {
+  display: grid;
+  grid-template-columns: 1fr 56px auto;
+  gap: 8px;
+}
+
+.category-list {
+  display: grid;
+  gap: 8px;
+}
+
+.category-row {
+  display: grid;
+  grid-template-columns: 18px 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.category-swatch {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+}
+
+.status {
+  min-height: 20px;
+  color: #475569;
+}
+

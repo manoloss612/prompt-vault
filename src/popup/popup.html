@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prompt Vault</title>
+    <link rel="stylesheet" href="./popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <h1>Prompt Vault</h1>
+        <div class="actions">
+          <button id="addPrompt" type="button" title="Add prompt">+</button>
+          <button id="openOptions" type="button" title="Settings">Settings</button>
+        </div>
+      </header>
+
+      <section class="filters" aria-label="Prompt filters">
+        <input id="search" type="search" placeholder="Search prompts">
+        <select id="categoryFilter" aria-label="Category filter"></select>
+      </section>
+
+      <section id="promptList" class="prompt-list" aria-live="polite"></section>
+
+      <section id="editor" class="editor hidden" aria-label="Prompt editor">
+        <input id="title" placeholder="Title">
+        <select id="category"></select>
+        <input id="tags" placeholder="Tags, comma separated">
+        <textarea id="body" placeholder="Prompt text"></textarea>
+        <textarea id="notes" placeholder="Notes"></textarea>
+        <div id="optimizedBox" class="optimized hidden">
+          <div class="section-title">Optimized result</div>
+          <textarea id="optimizedText"></textarea>
+          <button id="acceptOptimized" type="button">Use result</button>
+        </div>
+        <div class="editor-actions">
+          <button id="savePrompt" type="button">Save</button>
+          <button id="optimizePrompt" type="button">Optimize</button>
+          <button id="cancelEdit" type="button">Cancel</button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <button id="exportData" type="button">Export</button>
+        <label class="import">
+          Import
+          <input id="importData" type="file" accept="application/json">
+        </label>
+      </footer>
+
+      <div id="status" class="status" role="status"></div>
+    </main>
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>
+

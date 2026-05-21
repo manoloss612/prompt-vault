@@ -1,0 +1,20 @@
+{
+  "name": "prompt-vault-extension",
+  "version": "0.1.0",
+  "description": "A Chrome and Edge extension for saving, copying, editing, optimizing, categorizing, and syncing prompts.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "check:manifest": "node -e \"JSON.parse(require('fs').readFileSync('manifest.json','utf8')); console.log('manifest ok')\""
+  },
+  "keywords": [
+    "browser-extension",
+    "prompt",
+    "chrome",
+    "edge",
+    "manifest-v3"
+  ],
+  "license": "MIT"
+}
+

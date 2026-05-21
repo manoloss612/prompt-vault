@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prompt Vault Settings</title>
+    <link rel="stylesheet" href="./options.css">
+  </head>
+  <body>
+    <main class="settings">
+      <h1>Prompt Vault Settings</h1>
+
+      <section>
+        <h2>LLM API</h2>
+        <label>
+          API Base URL
+          <input id="apiBaseUrl" placeholder="https://api.openai.com/v1">
+        </label>
+        <label>
+          API Key
+          <input id="apiKey" type="password" placeholder="Stored locally only">
+        </label>
+        <label>
+          Model
+          <input id="model" placeholder="gpt-4.1-mini">
+        </label>
+        <label>
+          Optimization instruction
+          <textarea id="optimizationInstruction"></textarea>
+        </label>
+        <button id="saveSettings" type="button">Save settings</button>
+      </section>
+
+      <section>
+        <h2>Categories</h2>
+        <div class="category-form">
+          <input id="categoryName" placeholder="Category name">
+          <input id="categoryColor" type="color" value="#2563eb" aria-label="Category color">
+          <button id="addCategory" type="button">Add</button>
+        </div>
+        <div id="categoryList" class="category-list"></div>
+      </section>
+
+      <div id="status" class="status" role="status"></div>
+    </main>
+    <script type="module" src="./options.js"></script>
+  </body>
+</html>
+
